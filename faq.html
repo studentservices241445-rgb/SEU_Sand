@@ -1,0 +1,144 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+  <meta name="theme-color" content="#0ea5e9">
+  <link rel="manifest" href="./manifest.webmanifest">
+  <link rel="icon" href="./assets/icons/icon-192.png">
+  <link rel="apple-touch-icon" href="./assets/icons/icon-192.png">
+  <title>FAQ | خدمات طلاب SEU</title>
+
+  <meta name="share:title" content="FAQ | خدمات طلاب SEU">
+  <meta name="share:text" content="الأسئلة الشائعة — اعرف كيف تثبّت التطبيق وتستخدم الفاتورة والجدول.">
+  
+
+  <link rel="stylesheet" href="./assets/css/style.css">
+</head>
+<body data-page="faq">
+  <header class="appbar">
+    <div class="appbar-inner">
+      <a class="brand" href="./index.html" aria-label="الرئيسية">
+        <div class="brand-logo">SS</div>
+        <div class="brand-title">
+          <b>خدمات طلاب SEU</b>
+          <span>تطبيق ويب ثابت — قابل للتثبيت (PWA)</span>
+        </div>
+      </a>
+
+      <div class="toplinks">
+        <span class="badge" title="يعمل دون خادم (Static) + حفظ محلي">🔒 خصوصية + 📴 وضع دون اتصال</span>
+        <button class="btn small" id="btnInstall" type="button">تثبيت التطبيق</button>
+        <button class="btn small" id="btnShare" type="button">مشاركة</button>
+      </div>
+    </div>
+  </header>
+
+  <div class="container">
+    
+  <section class="hero">
+    <h1>الأسئلة الشائعة</h1>
+    <p>أجوبة سريعة لأكثر الأسئلة تكرارًا.</p>
+    <div class="hero-actions">
+      <a class="btn" href="./services.html">الخدمات</a>
+      <a class="btn secondary" href="./order.html">إنشاء فاتورة</a>
+      <a class="btn" href="./support.html">الدعم</a>
+    </div>
+  </section>
+
+  <section class="card" style="margin-top:14px">
+    <h2>كيف أثبّت التطبيق؟</h2>
+    <p>
+      افتح الموقع من المتصفح (Chrome/Edge/Safari)، ثم اضغط زر <b>تثبيت التطبيق</b> بالأعلى.
+      إذا لم يظهر: من قائمة المتصفح اختر “Add to Home Screen / تثبيت”.
+    </p>
+  </section>
+
+  <section class="card" style="margin-top:14px">
+    <h2>هل يعمل بدون إنترنت؟</h2>
+    <p>
+      نعم — بعد أول زيارة يتم حفظ الملفات الأساسية عبر Service Worker،
+      وتستطيع فتح الصفحات الأساسية حتى لو انقطع الاتصال.
+    </p>
+  </section>
+
+  <section class="card" style="margin-top:14px">
+    <h2>كيف زر المشاركة يختلف حسب الصفحة؟</h2>
+    <p>
+      كل صفحة تحتوي نص مشاركة مختلف (مثل آية/حديث/نصيحة)، وزر المشاركة يقرأه تلقائيًا.
+      إذا جهازك يدعم <b>Web Share API</b> ستفتح نافذة المشاركة الأصلية، وإلا سيتم نسخ النص.
+    </p>
+  </section>
+
+  <section class="card" style="margin-top:14px">
+    <h2>هل تحفظون بياناتي في قاعدة بيانات؟</h2>
+    <p>
+      لا. هذا موقع ثابت بدون خادم، لذلك يتم حفظ البيانات محليًا على جهازك فقط (LocalStorage).
+    </p>
+  </section>
+
+  <section class="card" style="margin-top:14px">
+    <h2>كيف أحفظ جدول المتابعة PDF؟</h2>
+    <p>
+      من صفحة <b>المتابعة</b> اضغط “حفظ الجدول كـ PDF (طباعة)”، ثم اختر “Save as PDF”.
+      تم تفعيل إعدادات الطباعة للحفاظ على الألوان قدر الإمكان.
+    </p>
+  </section>
+
+  <section class="card" style="margin-top:14px">
+    <h2>هل في إشعارات أسبوعية؟</h2>
+    <p>
+      لأن الموقع ثابت، أفضل حل موثوق هو تنزيل ملف تقويم (.ics) من صفحة المتابعة ثم إضافته لتقويمك،
+      فيصير عندك تذكير أسبوعي تلقائيًا.
+    </p>
+  </section>
+
+  <section class="card" style="margin-top:14px">
+    <h2>عن النزاهة الأكاديمية</h2>
+    <p>
+      المنصة تقدم شرح/مراجعة/تنظيم وتوجيه، ولا تقدم تنفيذ واجبات أو اختبارات بدل الطالب.
+      هذا يحميك ويزيد الثقة والاستدامة.
+    </p>
+  </section>
+
+
+    <div class="footer">
+      <div class="muted">
+        ⚠️ تنبيه النزاهة: المنصّة تقدم <b>شرح/متابعة/تجهيز</b> فقط، ولا تنفذ واجبات/اختبارات بدل الطالب.
+      </div>
+      <div style="margin-top:8px">
+        © 2026 — نموذج أولي قابل للتطوير. يعمل على GitHub Pages.
+      </div>
+    </div>
+  </div>
+
+  <div class="fab no-print">
+    <a class="btn primary" href="https://wa.me/966533940866" target="_blank" rel="noopener">واتساب</a>
+    <a class="btn secondary" href="https://t.me/Student_services25" target="_blank" rel="noopener">تليجرام</a>
+  </div>
+
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+  <nav class="bottomnav no-print" aria-label="شريط التنقل السفلي">
+    <div class="wrap">
+      <a class="navitem" data-nav="home" href="./index.html">
+        <span class="navicon">🏠</span><strong>الرئيسية</strong>
+      </a>
+      <a class="navitem" data-nav="services" href="./services.html">
+        <span class="navicon">🧩</span><strong>الخدمات</strong>
+      </a>
+      <a class="navitem" data-nav="order" href="./order.html">
+        <span class="navicon">🧾</span><strong>فاتورة</strong>
+      </a>
+      <a class="navitem" data-nav="dashboard" href="./dashboard.html">
+        <span class="navicon">🗺️</span><strong>المتابعة</strong>
+      </a>
+      <a class="navitem" data-nav="support" href="./support.html">
+        <span class="navicon">🆘</span><strong>الدعم</strong>
+      </a>
+    </div>
+  </nav>
+
+  <script defer src="./assets/js/app.js"></script>
+</body>
+</html>

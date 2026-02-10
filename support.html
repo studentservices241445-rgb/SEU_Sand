@@ -1,0 +1,162 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+  <meta name="theme-color" content="#0ea5e9">
+  <link rel="manifest" href="./manifest.webmanifest">
+  <link rel="icon" href="./assets/icons/icon-192.png">
+  <link rel="apple-touch-icon" href="./assets/icons/icon-192.png">
+  <title>الدعم | خدمات طلاب SEU</title>
+
+  <meta name="share:title" content="الدعم | خدمات طلاب SEU">
+  <meta name="share:text" content="إذا واجهت تأخير/مشكلة: استخدم نموذج الدعم لتوليد رسالة مفصلة وإرسالها.">
+  
+
+  <link rel="stylesheet" href="./assets/css/style.css">
+</head>
+<body data-page="support">
+  <header class="appbar">
+    <div class="appbar-inner">
+      <a class="brand" href="./index.html" aria-label="الرئيسية">
+        <div class="brand-logo">SS</div>
+        <div class="brand-title">
+          <b>خدمات طلاب SEU</b>
+          <span>تطبيق ويب ثابت — قابل للتثبيت (PWA)</span>
+        </div>
+      </a>
+
+      <div class="toplinks">
+        <span class="badge" title="يعمل دون خادم (Static) + حفظ محلي">🔒 خصوصية + 📴 وضع دون اتصال</span>
+        <button class="btn small" id="btnInstall" type="button">تثبيت التطبيق</button>
+        <button class="btn small" id="btnShare" type="button">مشاركة</button>
+      </div>
+    </div>
+  </header>
+
+  <div class="container">
+    
+  <section class="hero">
+    <h1>الدعم / بلاغ التأخير</h1>
+    <p>
+      إذا طلبت خدمة وتم تحويل المبلغ أو تم الاتفاق ولم يصلك رد — استخدم هذا النموذج لتوليد رسالة
+      مفصلة مع تعليمات الإرفاق.
+    </p>
+    <div class="hero-actions">
+      <a class="btn" href="./order.html">رجوع للفواتير</a>
+      <a class="btn secondary" href="https://t.me/SEU_Services_SandBot" target="_blank" rel="noopener">فتح بوت التليجرام</a>
+    </div>
+  </section>
+
+  <section class="card" style="margin-top:14px">
+    <h2>نموذج البلاغ</h2>
+    <form id="supportForm">
+      <div class="row">
+        <div>
+          <label>الاسم</label>
+          <input name="fullName" placeholder="اسمك الكامل">
+        </div>
+        <div>
+          <label>واتساب</label>
+          <input name="phone" placeholder="05xxxxxxxx">
+        </div>
+      </div>
+
+      <div class="row" style="margin-top:10px">
+        <div>
+          <label>تليجرام (اختياري)</label>
+          <input name="telegram" placeholder="Student_services25">
+        </div>
+        <div>
+          <label>رقم الفاتورة (إن وجد)</label>
+          <input name="invoiceId" placeholder="SS-XXXXX-XXXXX">
+        </div>
+      </div>
+
+      <div style="margin-top:10px">
+        <label>نوع المشكلة</label>
+        <select name="issueType" required>
+          <option>تأخر رد/تأكيد</option>
+          <option>تم التحويل ولم يتم التأكيد</option>
+          <option>استفسار عن خدمة</option>
+          <option>مشكلة تقنية بالموقع</option>
+          <option>أخرى</option>
+        </select>
+      </div>
+
+      <div style="margin-top:10px">
+        <label>تفاصيل إضافية</label>
+        <textarea name="details" placeholder="اكتب التفاصيل: وقت التحويل، المبلغ، اسم المحول، أي ملاحظات..."></textarea>
+      </div>
+
+      <div class="notice" style="margin-top:10px">
+        <b>مهم:</b> بعد تجهيز الرسالة، أرفق الصور داخل المحادثة:
+        <ul style="margin:8px 0 0;padding-right:18px;color:var(--muted)">
+          <li>صورة الإيصال</li>
+          <li>سكرين شوت من المحادثة (إن وجد)</li>
+        </ul>
+      </div>
+
+      <div style="margin-top:12px">
+        <button class="btn primary block" type="submit">تجهيز رسالة البلاغ</button>
+      </div>
+    </form>
+  </section>
+
+  <section class="card" style="margin-top:14px" id="supportActions">
+    <h2>الخطوة التالية</h2>
+    <p>بعد الضغط على "تجهيز رسالة البلاغ" سيتم نسخ الرسالة تلقائيًا. ثم اختر طريقة الإرسال:</p>
+    <div class="row" style="margin-top:10px">
+      <a class="btn secondary block" id="botLink" href="https://t.me/SEU_Services_SandBot" target="_blank" rel="noopener">فتح البوت (ثم الصق الرسالة)</a>
+      <a class="btn block" id="tgShare" href="https://t.me/share/url?url=&text=" target="_blank" rel="noopener">مشاركة عبر تليجرام</a>
+    </div>
+    <div class="row" style="margin-top:10px">
+      <a class="btn primary block" id="waSupport" href="https://wa.me/966533940866" target="_blank" rel="noopener">واتساب برسالة جاهزة</a>
+      <a class="btn block" href="https://t.me/Student_services25" target="_blank" rel="noopener">تليجرام @Student_services25</a>
+    </div>
+    <div class="notice" style="margin-top:12px">
+      ⚠️ فضلاً لا ترسل أكثر من مرة. كثرة الإرسال قد تسبب تأخير في المراجعة.
+    </div>
+  </section>
+
+
+    <div class="footer">
+      <div class="muted">
+        ⚠️ تنبيه النزاهة: المنصّة تقدم <b>شرح/متابعة/تجهيز</b> فقط، ولا تنفذ واجبات/اختبارات بدل الطالب.
+      </div>
+      <div style="margin-top:8px">
+        © 2026 — نموذج أولي قابل للتطوير. يعمل على GitHub Pages.
+      </div>
+    </div>
+  </div>
+
+  <div class="fab no-print">
+    <a class="btn primary" href="https://wa.me/966533940866" target="_blank" rel="noopener">واتساب</a>
+    <a class="btn secondary" href="https://t.me/Student_services25" target="_blank" rel="noopener">تليجرام</a>
+  </div>
+
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+  <nav class="bottomnav no-print" aria-label="شريط التنقل السفلي">
+    <div class="wrap">
+      <a class="navitem" data-nav="home" href="./index.html">
+        <span class="navicon">🏠</span><strong>الرئيسية</strong>
+      </a>
+      <a class="navitem" data-nav="services" href="./services.html">
+        <span class="navicon">🧩</span><strong>الخدمات</strong>
+      </a>
+      <a class="navitem" data-nav="order" href="./order.html">
+        <span class="navicon">🧾</span><strong>فاتورة</strong>
+      </a>
+      <a class="navitem" data-nav="dashboard" href="./dashboard.html">
+        <span class="navicon">🗺️</span><strong>المتابعة</strong>
+      </a>
+      <a class="navitem" data-nav="support" href="./support.html">
+        <span class="navicon">🆘</span><strong>الدعم</strong>
+      </a>
+    </div>
+  </nav>
+
+  <script defer src="./assets/js/app.js"></script>
+</body>
+</html>
